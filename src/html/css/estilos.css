@@ -148,7 +148,10 @@
     margin-top: 0;
   }
 }
-.navbar .nav-item.:hover{
+.navbar .nav-item.dropdown:hover{
     background-color: var(--verde);
+    border-radius: 5px;
+    transition: background-color 0.6s ease-in-out;
+    padding: 0.5rem 1rem;
 }
 
