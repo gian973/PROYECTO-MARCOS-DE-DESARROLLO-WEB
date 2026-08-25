@@ -154,3 +154,25 @@
     padding: 0.5px;
 }
 
+
+/* Seccion del Footer */
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #262923;
+    color: #69aa02;
+}
+
+.footer-bottom p {
+    margin: 8px 0;
+}
+
+.footer-bottom a {
+    color: #423ff5;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
