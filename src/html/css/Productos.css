@@ -1,0 +1,135 @@
+.productos-page {
+    min-height: 100vh;
+    background-color: #f7f8f5;
+    color: #25282d;
+}
+
+.productos-header {
+    padding: 4.5rem 1.25rem 3rem;
+    text-align: center;
+}
+
+.productos-header h1 {
+    margin-bottom: 0.9rem;
+    color: var(--morado);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+}
+
+.productos-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #4d5560;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.productos-container {
+    padding: 1rem 0 4.5rem;
+}
+
+.productos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid rgba(81, 71, 154, 0.08);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+    transform: translateY(-0.5rem);
+}
+
+.producto-imagen {
+    display: grid;
+    min-height: 190px;
+    place-items: center;
+    background: linear-gradient(145deg, rgba(160, 201, 75, 0.22), rgba(81, 71, 154, 0.12));
+    color: var(--morado);
+}
+
+.producto-imagen i {
+    font-size: 5rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover .producto-imagen i {
+    transform: scale(1.08);
+}
+
+.producto-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.25rem;
+}
+
+.producto-info h2 {
+    margin-bottom: 0.65rem;
+    color: var(--morado);
+    font-size: 1.35rem;
+}
+
+.producto-info p {
+    flex: 1;
+    margin-bottom: 1rem;
+    color: #4d5560;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.producto-categoria {
+    display: block;
+    margin-bottom: 1rem;
+    color: #516923;
+    font-weight: 700;
+}
+
+.btn-producto {
+    width: 100%;
+    padding: 0.65rem 1rem;
+    border: 0;
+    border-radius: 0.4rem;
+    background-color: var(--morado);
+    color: #fff;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-producto:hover,
+.btn-producto:focus-visible {
+    background-color: #3f377c;
+}
+
+.btn-producto:active {
+    transform: translateY(1px);
+}
+
+@media (max-width: 575.98px) {
+    .productos-header {
+        padding-top: 3rem;
+    }
+
+    .productos-lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .producto,
+    .producto-imagen i,
+    .btn-producto {
+        transition: none;
+    }
+}
